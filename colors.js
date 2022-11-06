@@ -1,6 +1,7 @@
 //CODE from: http://axonflux.com/handy-rgb-to-hsl-and-rgb-to-hsv-color-model-c 
 
 /**
+ * con SonarQube
  * Converts an RGB color value to HSL. Conversion formula
  * adapted from http://en.wikipedia.org/wiki/HSL_color_space.
  * Assumes r, g, and b are contained in the set [0, 255] and
