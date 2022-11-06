@@ -46,7 +46,7 @@ function rgbToHsl(r, g, b){
  * @param   Number  l       The lightness
  * @return  Array           The RGB representation
  */
-function hslToRgb(h, s, l{
+function hslToRgb(h, s, l){
     let r, g, b;
 
     if(s == 0){
@@ -59,7 +59,7 @@ function hslToRgb(h, s, l{
             if(t < 1/2) return q;
             if(t < 2/3) return p + (q - p) * (2/3 - t) * 6;
             return p;
-        }
+        
 
         var q = l < 0.5 ? l * (1 + s) : l + s - l * s;
         var p = 2 * l - q;
