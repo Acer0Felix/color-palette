@@ -19,7 +19,7 @@ function generateRules(){
     let rgbStrings = []
     while(i<=numColors){
         let currentHSV = colors[i-1]
-        let rgb = hsvToRgb(currentHSV[0]/360,currentHSV[1],currentHSV[2])
+        let rgb = hsv_ToRgb(currentHSV[0]/360,currentHSV[1],currentHSV[2])
         let rgbString = `rgb(${rgb[0]},${rgb[1]},${rgb[2]})`
         rgbStrings.push(rgbString)
         document.getElementById(`color${i}`).style.backgroundColor = rgbString
