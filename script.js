@@ -24,7 +24,7 @@ function generateRules(){
         rgbStrings.push(rgbString)
         document.getElementById(`color${i}`).style.backgroundColor = rgbString
         i++;
-    }
+    
     document.getElementById('css-rules').innerHTML=`
 .website-background{ color: ${rgbStrings[0]};}
 

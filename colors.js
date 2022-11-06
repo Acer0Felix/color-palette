@@ -59,10 +59,10 @@ function hslToRgb(h, s, l){
             if(t < 1/2) return q;
             if(t < 2/3) return p + (q - p) * (2/3 - t) * 6;
             return p;
-        
+        }
 
-        var q = l < 0.5 ? l * (1 + s) : l + s - l * s;
-        var p = 2 * l - q;
+        let q = l < 0.5 ? l * (1 + s) : l + s - l * s;
+        let p = 2 * l - q;
         r = hue2rgb(p, q, h + 1/3);
         g = hue2rgb(p, q, h);
         b = hue2rgb(p, q, h - 1/3);
@@ -84,8 +84,8 @@ function hslToRgb(h, s, l){
  */
 function rgbToHsv(r, g, b){
     r = r/255, g = g/255, b = b/255;
-    var max = Math.max(r, g, b), min = Math.min(r, g, b);
-    var h, s, v = max;
+    let max = Math.max(r, g, b), min = Math.min(r, g, b);
+    let h, s, v = max;
 
     var d = max - min;
     s = max == 0 ? 0 : d / max;
