@@ -4,8 +4,8 @@ function randomPalette(){
     const dist = 360/numColors;
     const saturation = 1, brightness = 1;
     //Get the first color's hue value
-    let newColor = Math.ceil(Math.random()*359);
-    let colors = []
+    var newColor = Math.ceil(Math.random()*359);
+    var colors = []
     while(colors.length<numColors){
         colors.push([newColor, saturation, brightness])
         newColor = (newColor + dist) % 360
@@ -14,9 +14,9 @@ function randomPalette(){
 }
 
 function generateRules(){
-    let i = 1
-    let colors = randomPalette()
-    let rgbStrings = []
+    var i = 1
+    var colors = randomPalette()
+    var rgbStrings = []
     while(i<=numColors){
         let currentHSV = colors[i-1]
         let rgb = hsv_ToRgb(currentHSV[0]/360,currentHSV[1],currentHSV[2])
@@ -39,7 +39,7 @@ function generateRules(){
 }
 
 function clean(){
-    let i = 1;
+    var i = 1;
     while(i<=numColors){
         document.getElementById(`color${i}`).style.backgroundColor = '#FFFFFF'
         i++;

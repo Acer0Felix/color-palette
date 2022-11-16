@@ -20,7 +20,7 @@ function rgbToHsl(r, g, b){
     if(max == min){
         h = s = 0; // achromatic
     }else{
-        let d = max - min;
+        var d = max - min;
         s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
         switch(max){
             case r: h = (g - b) / d + (g < b ? 6 : 0); break;
@@ -45,7 +45,7 @@ function rgbToHsl(r, g, b){
  * @return  Array           The RGB representation
  */
 function hslToRgb(h, s, l){
-    let r, g, b;
+    var r, g, b;
 
     if(s == 0){
         r = g = b = l; // achromatic
@@ -82,8 +82,8 @@ function hslToRgb(h, s, l){
  */
 function rgbToHsv(r, g, b){
     r = r/255, g = g/255, b = b/255;
-    let max = Math.max(r, g, b), min = Math.min(r, g, b);
-    let h, s, v = max;
+    var max = Math.max(r, g, b), min = Math.min(r, g, b);
+    var h, s, v = max;
 
     var d = max - min;
     s = max == 0 ? 0 : d / max;
