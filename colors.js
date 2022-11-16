@@ -12,12 +12,10 @@
  * @return  Array           The HSL representation
  */
 function rgbToHsl(r, g, b){
-    r /= 255
-    g /= 255;
-    b /= 255;
+    r /= 255, g /= 255, b /= 255;
 
-    let max = Math.max(r, g, b), min = Math.min(r, g, b);
-    let h, s, l = (max + min) / 2;
+    var max = Math.max(r, g, b), min = Math.min(r, g, b);
+    var h, s, l = (max + min) / 2;
 
     if(max == min){
         h = s = 0; // achromatic
