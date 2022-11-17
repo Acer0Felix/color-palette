@@ -12,7 +12,7 @@
  * @return  Array           The HSL representation
  */
 function rgbToHsl(r, g, b){
-    
+
     r /= 255;
     g /= 255;
     b /= 255;
@@ -33,7 +33,7 @@ function rgbToHsl(r, g, b){
         h /= 6
     }
 
- 
+    return [h, s, l];
 }
 
 /**
